@@ -4,20 +4,23 @@ public class paciente{
     
     private String nombre;
     private int fechaNacimiento;
+    private int edad;
     private String telefono;
     private String direccion;
     private String sexo;
     private String cedula;
     private boolean seguro;
 
-    public paciente(String nombre, int fechaNacimiento, String  telefono, String direccion, String sexo, String cedula, boolean seguro ){
-        this.nombre = nombre;
-        this.fechaNacimiento = fechaNacimiento;
-        this.telefono = telefono;
-        this.direccion = direccion;
-        this.sexo = sexo;
-        this.cedula = cedula;
-        this.seguro = seguro
+    public paciente(String nombre, int fechaNacimiento, int edad, String  telefono, 
+                    String direccion, String sexo, String cedula, boolean seguro ){
+        setNombre(nombre);
+        setFechaNacimiento(fechaNacimiento);
+        setEdad(edad);
+        setTelefono(telefono);
+        setDireccion(direccion);
+        setSexo(sexo);
+        setCedula(cedula);
+        setSeguro(seguro);
     }
 
     public String getNombre() {
@@ -34,6 +37,14 @@ public class paciente{
 
     public void setFechaNacimiento(int fechaNacimiento) {
         this.fechaNacimiento = fechaNacimiento;
+    }
+
+    public int getEdad(){
+        return edad;
+    }
+
+    public void setEdad(int edad){
+        this.edad = edad;
     }
 
     public String getTelefono() {
