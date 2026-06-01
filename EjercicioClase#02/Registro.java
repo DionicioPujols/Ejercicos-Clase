@@ -35,14 +35,4 @@ public class Registro {
             }
         }
     }
-
-    //Metodo para buscar paciente por una cedula registrada
-
-    public Paciente buscarPacientePorCedula(String cedulaBuscar) {
-        for (Paciente p : listaPacientes) {
-            if (p.getCedula().equals(cedulaBuscar)) {
-                return p; /
-            }
-        }
-        return null; 
 }
