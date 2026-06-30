@@ -8,11 +8,11 @@ public class App extends Application {
     
     @Override
     public void start(Stage primaryStage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("/view/generador.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/view/principal.fxml"));
         
         Scene scene = new Scene(root, 400, 500);
         
-        primaryStage.setTitle("Generador de Contraseñas");
+        primaryStage.setTitle("Generador de Contrasenas");
         primaryStage.setScene(scene);
         primaryStage.setResizable(false);
         primaryStage.show();
