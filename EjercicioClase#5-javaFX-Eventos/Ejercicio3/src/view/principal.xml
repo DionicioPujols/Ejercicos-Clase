@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<TitledPane animated="false" text="Generador de contraseñas" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Controller">
+   <content>
+      <VBox spacing="15.0">
+         <padding>
+            <Insets bottom="20.0" left="30.0" right="30.0" top="20.0" />
+         </padding>
+
+         <Label text="GENERAR CONTRASEÑA" textFill="#d32f2f">
+            <font>
+               <Font name="System Bold" size="16.0" />
+            </font>
+         </Label>
+
+         <VBox spacing="5.0">
+            <Label text="Longitud">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtLongitud" onKeyPressed="#generarOnEnter" promptText="Ingrese la cantidad" maxWidth="150.0" />
+         </VBox>
+
+         <VBox spacing="8.0">
+            <Label text="Seleccione lo que desea añadir">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <CheckBox fx:id="chkMayusculas" mnemonicParsing="false" text="Incluir Mayúsculas" />
+            <CheckBox fx:id="chkNumeros" mnemonicParsing="false" text="Incluir Números" />
+            <CheckBox fx:id="chkSimbolos" mnemonicParsing="false" text="Incluir Símbolos" />
+         </VBox>
+
+         <HBox spacing="15.0">
+            <Button fx:id="btnGenerar" mnemonicParsing="false" onAction="#generarAction" onMouseEntered="#onMouseEntered" onMouseExited="#onMouseExited" text="Generar" />
+            <Button fx:id="btnLimpiar" mnemonicParsing="false" onAction="#limpiarAction" text="Limpiar" />
+         </HBox>
+
+         <VBox spacing="5.0">
+            <Label text="RESULTADO">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblResumen" text="Esperando Informacion..." textFill="#555555" wrapText="true" />
+         </VBox>
+      </VBox>
+   </content>
+</TitledPane>
